@@ -20,7 +20,10 @@
     },
     "rules": {
         // 추가 규칙이나 기존 규칙 덮어쓰기
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "react/jsx-filename-extension": [
+            1,
+            { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+        ],
         "import/extensions": [
             "error",
             "ignorePackages",
