@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+const HomePage: React.FC = () => <div>Hello, World!</div>;
 
-export default function Home() {
-    return <>Hello, World!</>;
-}
+export default HomePage;
