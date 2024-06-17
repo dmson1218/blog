@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const markdownDir = path.join(process.cwd(), 'content');
+const markdownDir = path.join(process.cwd(), '/src/content');
 
 export function getMDFiles() {
     return fs.readdirSync(markdownDir);
