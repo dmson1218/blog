@@ -16,7 +16,7 @@ export default function RootLayout({
         <html>
             <body>
                 <Navigation />
-                <div className="p-6">{children}</div>
+                <div className="p-6 justify-center">{children}</div>
             </body>
         </html>
     );
