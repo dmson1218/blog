@@ -6,16 +6,18 @@ const navigationItem = [
 ];
 
 const Navigation = () => (
-    <nav className="flex justify-between p-4 bg-cyan-100">
-        <Link className="px-2" href="/">
-            ForFree
-        </Link>
-        <div>
-            {navigationItem.map(item => (
-                <Link key={item.href} className="px-2" href={item.href}>
-                    {item.name}
-                </Link>
-            ))}
+    <nav className="py-5 bg-cyan-100">
+        <div className="max-w-4xl px-4 mx-auto flex justify-between items-center">
+            <Link href="/" className="text-2xl">
+                ForFree
+            </Link>
+            <div className="flex gap-4 text-lg">
+                {navigationItem.map(item => (
+                    <Link key={item.href} href={item.href}>
+                        {item.name}
+                    </Link>
+                ))}
+            </div>
         </div>
     </nav>
 );
