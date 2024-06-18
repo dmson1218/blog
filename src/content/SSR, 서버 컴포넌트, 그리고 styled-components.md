@@ -6,7 +6,7 @@
 
 먼저 동작 과정부터 이해해야 한다. styled-components는 각 컴포넌트가 정의될 때 고유한 ID를 생성하고, Tagged Template Literals를 평가해 CSS 문자열을 만든다. 이후 고유 ID와 CSS를 바탕으로 해시를 생성해 클래스명으로 활용한다. 실제로 DOM을 살펴보면 정말 고유해 보이는 클래스명들을 확인할 수 있다.
 
-![SSR, 서버 컴포넌트, 그리고 styled-components 1](./image/SSR%2C%20서버%20컴포넌트%2C%20그리고%20styled-components%201.png)
+![SSR, 서버 컴포넌트, 그리고 styled-components 1](/image/SSR%2C%20서버%20컴포넌트%2C%20그리고%20styled-components%201.png)
 
 클래스명은 `useState` 훅을 통해 관리되므로, 변화를 감지하면서 필요한 경우 스타일을 다시 적용할 수 있다.
 
@@ -131,7 +131,7 @@ Next.js는 13버전부터 서버 컴포넌트 개념이 추가되었다. 서버�
 
 특히 styled-components는 내부에서 React Context API를 사용하기 때문에, 서버 컴포넌트에서 사용하면 오류가 발생한다. Context API 또한 클라이언트 측에서 상태 주입을 도와주는 API이기 때문이다.
 
-![SSR, 서버 컴포넌트, 그리고 styled-components 2](./image/SSR%2C%20서버%20컴포넌트%2C%20그리고%20styled-components%202.png)
+![SSR, 서버 컴포넌트, 그리고 styled-components 2](/image/SSR%2C%20서버%20컴포넌트%2C%20그리고%20styled-components%202.png)
 
 따라서 styled-components를 통해 스타일링하기 위해서는 모든 컴포넌트에 `use client`를 붙여야 한다..
 
