@@ -7,15 +7,8 @@ export function getMDFiles() {
     return fs.readdirSync(markdownDir);
 }
 
-export function getMDFileBySlug(filename: string) {
-    const realPath = path.join(markdownDir, filename);
-    const fileContents = fs.readFileSync(realPath, 'utf-8');
-    return fileContents;
-}
-
-export function getAllMDFiles() {
-    const files = getMDFiles();
-    return files.map(file => {
-        return getMDFileBySlug(file);
-    });
+export function getMDFileBySlug(file: string) {
+    const filePath = path.join(markdownDir, file);
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    return fileContent;
 }
