@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+code {
+    @apply px-2 py-1 rounded bg-gray-100 text-red-500;
+}
+
+code::before,
+code::after {
+    content: none !important;
+}
