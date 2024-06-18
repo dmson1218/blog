@@ -10,16 +10,20 @@ interface PostBySlugPageParams {
 }
 
 const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
-    const file = decodeURIComponent(params.slug) + '.md';
+    const filename = decodeURIComponent(params.slug);
+    const file = filename + '.md';
     const content = getMDFileBySlug(file);
 
     return (
-        <ReactMarkDown
-            key={content}
-            className="prose-base prose-headings:font-bold prose-img:m-0 prose-pre:m-0 prose-pre:p-0 prose-pre:text-base"
-            children={content}
-            rehypePlugins={[rehypeHighlight]}
-        />
+        <div className="px-6 py-8 mx-4 rounded-xl bg-white">
+            <div className="mb-6 text-3xl font-bold">{filename}</div>
+            <ReactMarkDown
+                key={content}
+                className="prose-base prose-headings:font-bold prose-img:m-0 prose-pre:m-0 prose-pre:p-0 prose-pre:text-base"
+                children={content}
+                rehypePlugins={[rehypeHighlight]}
+            />
+        </div>
     );
 };
 

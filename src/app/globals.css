@@ -10,3 +10,7 @@ code::before,
 code::after {
     content: none !important;
 }
+
+li::before {
+    content: '- ';
+}
