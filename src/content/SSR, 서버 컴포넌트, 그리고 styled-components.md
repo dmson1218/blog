@@ -1,3 +1,9 @@
+---
+title: SSR, 서버 컴포넌트, 그리고 styled-components
+category: 블로그 개발기
+date: 2024-06-10T13:05:41.000Z
+---
+
 ### styled-components
 
 앞서 기술 스택을 선정하며 스타일링 라이브러리로 styled-components를 선택했다. 그러나 SSR 환경에서 CSS-in-JS 라이브러리를 사용하기 위해서는 추가적인 설정이 필요하다. 사용자에게 스타일이 입혀지지 않은 HTML이 잠깐 노출되는 `FOUC` 문제가 발생하기 때문이다.
