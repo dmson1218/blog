@@ -19,8 +19,9 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
             <div className="mb-6 pb-6 border-b flex justify-between">
                 <div className="text-3xl font-bold">{data.title}</div>
                 <div className="text-sm text-gray-500 content-end">
-                    {data.date.getFullYear()}-{data.date.getMonth() + 1}-
-                    {data.date.getDate()}
+                    {data.date.getFullYear()}-
+                    {(data.date.getMonth() + 1).toString().padStart(2, '0')}-
+                    {data.date.getDate().toString().padStart(2, '0')}
                 </div>
             </div>
             <ReactMarkDown
