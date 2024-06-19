@@ -15,7 +15,7 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
     const content = getMDFileBySlug(file);
 
     return (
-        <div className="px-6 py-8 mx-4 rounded-xl bg-white">
+        <>
             <div className="mb-6 text-3xl font-bold">{filename}</div>
             <ReactMarkDown
                 key={content}
@@ -23,7 +23,7 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
                 children={content}
                 rehypePlugins={[rehypeHighlight]}
             />
-        </div>
+        </>
     );
 };
 
