@@ -1,7 +1,7 @@
 ---
 title: SSR, 서버 컴포넌트, 그리고 styled-components
 category: 블로그 개발기
-date: 2024-06-10
+date: 2024-06-10T13:05:41.000Z
 ---
 
 ### styled-components
