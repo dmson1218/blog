@@ -12,11 +12,17 @@ interface PostBySlugPageParams {
 const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
     const filename = decodeURIComponent(params.slug);
     const file = filename + '.md';
-    const content = getMDFileBySlug(file);
+    const { data, content } = getMDFileBySlug(file);
 
     return (
         <>
-            <div className="mb-6 text-3xl font-bold">{filename}</div>
+            <div className="mb-6 pb-6 border-b flex justify-between">
+                <div className="text-3xl font-bold">{data.title}</div>
+                <div className="text-sm text-gray-500 content-end">
+                    {data.date.getFullYear()}-{data.date.getMonth() + 1}-
+                    {data.date.getDate()}
+                </div>
+            </div>
             <ReactMarkDown
                 key={content}
                 className="prose-base prose-headings:font-bold prose-img:m-0 prose-pre:m-0 prose-pre:p-0 prose-pre:text-base"
