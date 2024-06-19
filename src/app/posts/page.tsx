@@ -2,12 +2,12 @@ import { getMDFiles } from '#utils/markdown';
 import PreviewLink from '#components/PreviewLink';
 
 const PostsPage = () => {
-    const filenames = getMDFiles().map(file => file.replace('.md', ''));
+    const metaDatas = getMDFiles();
 
     return (
         <div className="mx-4 flex flex-col gap-2">
-            {filenames.map(filename => (
-                <PreviewLink key={filename} filename={filename} />
+            {metaDatas.map(({ title, date }) => (
+                <PreviewLink key={title} title={title} date={date} />
             ))}
         </div>
     );

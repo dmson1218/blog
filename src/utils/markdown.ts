@@ -13,6 +13,10 @@ export function getMDFiles() {
         return data;
     });
 
+    metaDatas.sort((a, b) => {
+        return b.date.getTime() - a.date.getTime();
+    });
+
     return metaDatas;
 }
 
