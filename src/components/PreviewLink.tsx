@@ -1,11 +1,7 @@
 import Link from 'next/link';
+import { MetaData } from '#utils/markdown';
 
-interface PreviewProps {
-    title: string;
-    date: Date;
-}
-
-const PreviewLink = ({ title, date }: PreviewProps) => {
+const PreviewLink = ({ title, category, date }: MetaData) => {
     return (
         <div>
             <Link href={`/posts/${title}`}>
