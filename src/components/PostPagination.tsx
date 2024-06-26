@@ -25,7 +25,7 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
 
     return (
         <div className="h-full flex flex-col justify-between">
-            <div>
+            <div className="flex flex-col gap-4">
                 {metaDatas[currentPage].map(({ title, category, date }) => (
                     <PreviewLink
                         key={title}
@@ -35,19 +35,19 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
                     />
                 ))}
             </div>
-            <div className="mx-4 flex justify-between gap-4">
+            <div className="mx-4 flex justify-center gap-8">
                 <button
                     onClick={handlePrev}
-                    className="px-4 py-2 bg-gray-200 rounded-md"
+                    className="px-4 py-2 border border-blue-200 rounded-md"
                 >
                     Prev
                 </button>
-                <span>
+                <span className="my-auto">
                     {currentPage + 1} / {metaDatas.length}
                 </span>
                 <button
                     onClick={handleNext}
-                    className="px-4 py-2 bg-gray-200 rounded-md"
+                    className="px-4 py-2 border border-blue-200 rounded-md"
                 >
                     Next
                 </button>

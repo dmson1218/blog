@@ -26,7 +26,7 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
             </div>
             <ReactMarkDown
                 key={content}
-                className="prose-base prose-headings:font-bold prose-img:m-0 prose-pre:m-0 prose-pre:p-0 prose-pre:text-base"
+                className="prose-base prose-headings:font-bold prose-img:mx-auto prose-img:my-0 prose-pre:m-0 prose-pre:p-0 prose-pre:text-base"
                 children={content}
                 rehypePlugins={[rehypeHighlight]}
             />
