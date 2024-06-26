@@ -16,17 +16,17 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
 
     return (
         <>
-            <div className="mb-6 pb-6 border-b flex justify-between">
+            <div className="mb-4 pb-4 border-b flex flex-col gap-3">
                 <div className="text-3xl font-bold">{data.title}</div>
                 <div className="text-sm text-gray-500 content-end">
-                    {data.date.getFullYear()}-
-                    {(data.date.getMonth() + 1).toString().padStart(2, '0')}-
-                    {data.date.getDate().toString().padStart(2, '0')}
+                    {data.date.getFullYear()}년{' '}
+                    {(data.date.getMonth() + 1).toString().padStart(2, '0')}월{' '}
+                    {data.date.getDate().toString().padStart(2, '0')}일
                 </div>
             </div>
             <ReactMarkDown
                 key={content}
-                className="prose-base prose-headings:font-bold prose-img:m-0 prose-pre:m-0 prose-pre:p-0 prose-pre:text-base"
+                className="prose-base prose-headings:font-bold prose-img:mx-auto prose-img:my-0 prose-pre:m-0 prose-pre:p-0 prose-pre:text-base"
                 children={content}
                 rehypePlugins={[rehypeHighlight]}
             />

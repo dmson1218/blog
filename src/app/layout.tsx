@@ -14,11 +14,9 @@ export default function RootLayout({
 }>) {
     return (
         <html>
-            <body className="relative bg-gray-100">
+            <body className="h-screen relative bg-gray-100 flex flex-col">
                 <Navigation />
-                <div className="max-w-4xl mx-auto my-6 justify-center">
-                    {children}
-                </div>
+                <div className="grow my-6 flex justify-center">{children}</div>
             </body>
         </html>
     );

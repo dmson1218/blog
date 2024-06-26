@@ -1,16 +1,10 @@
-import { getMDFiles } from '#utils/markdown';
-import PreviewLink from '#components/PreviewLink';
+import { MetaData, getMDFilesByPage } from '#utils/markdown';
+import PostPagination from '#components/PostPagination';
 
 const PostsPage = () => {
-    const metaDatas = getMDFiles();
+    const metaDatas = getMDFilesByPage();
 
-    return (
-        <div className="mx-4 flex flex-col gap-2">
-            {metaDatas.map(({ title, date }) => (
-                <PreviewLink key={title} title={title} date={date} />
-            ))}
-        </div>
-    );
+    return <PostPagination metaDatas={metaDatas} />;
 };
 
 export default PostsPage;
