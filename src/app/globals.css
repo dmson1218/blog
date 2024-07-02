@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 code {
-    @apply px-2 py-1 rounded bg-gray-100 text-red-500;
+    @apply px-1 py-0.5 rounded border bg-gray-300 italic;
 }
 
 code::before,
@@ -13,6 +13,10 @@ code::after {
 
 li::before {
     content: '- ';
+}
+
+blockquote {
+    @apply border-l-4 border-blue-400 bg-blue-100 p-2 italic;
 }
 
 .my-width {

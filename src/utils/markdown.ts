@@ -8,7 +8,7 @@ export interface MetaData {
     date: Date;
 }
 
-const POST_PER_PAGE = 7;
+const POST_PER_PAGE = 5;
 const markdownDir = path.join(process.cwd(), '/src/content');
 
 export function getMDFiles(): MetaData[] {
