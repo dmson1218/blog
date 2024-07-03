@@ -27,7 +27,7 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
         <div className="h-full flex flex-col">
             <div className="pb-4 border-b border-black flex flex-col gap-2">
                 <div className="text-xl sm:text-3xl font-bold">Posts</div>
-                <div className="text-sm sm:text-base">
+                <div className="text-base sm:text-lg font-semibold">
                     차곡차곡 모아가는 성장 기록입니다.
                 </div>
             </div>
