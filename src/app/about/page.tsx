@@ -35,7 +35,7 @@ const AboutPage: React.FC = () => {
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col gap-3">
                         <div className="text-xl sm:text-2xl font-bold">
-                            네이버 커넥트재단 부스트캠프 웹·모바일 8기 멤버십
+                            부스트캠프 웹·모바일 8기 멤버십
                             <div className="text-sm sm:text-base italic font-normal">
                                 웹 풀스택 과정 & 프론트엔드 과정 - 2023.08 ~
                                 2023.12
@@ -178,7 +178,7 @@ const AboutPage: React.FC = () => {
                     </div>
                     <div className="flex flex-col gap-3">
                         <div className="text-xl sm:text-2xl font-bold">
-                            네이버 커넥트재단 부스트캠프 웹·모바일 8기 챌린지
+                            부스트캠프 웹·모바일 8기 챌린지
                             <div className="text-sm sm:text-base italic font-normal">
                                 웹 풀스택 과정 - 2023.07 ~ 2023.08
                             </div>
