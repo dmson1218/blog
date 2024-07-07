@@ -1,13 +1,24 @@
 import ReactMarkDown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/atom-one-dark.css';
-import { getMDFileBySlug } from '#utils/markdown';
+import { getMDFiles, getMDFileBySlug } from '#utils/markdown';
 
-interface PostBySlugPageParams {
+type PostBySlugPageParams = {
     params: {
         slug: string;
     };
-}
+};
+
+export const generateStaticParams = () => {
+    const files = getMDFiles();
+    const paths = files.map(file => ({
+        params: {
+            slug: file.title.replace(/\.md$/, '').replaceAll(' ', '%20'),
+        },
+    }));
+
+    return paths;
+};
 
 const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
     const filename = decodeURIComponent(params.slug);
@@ -23,7 +34,7 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
             </div>
             <ReactMarkDown
                 key={content}
-                className="prose-base prose-headings:mt-6 prose-headings:mb-0 prose-headings:font-bold prose-img:mx-auto prose-img:my-4 prose-pre:my-0 prose-pre:p-0 prose-pre:text-base prose-a:text-blue-500 prose-a:underline prose-p:my-2"
+                className="prose-base prose-headings:mt-6 prose-headings:mb-1 prose-headings:font-bold prose-img:mx-auto prose-img:my-2 prose-pre:my-0 prose-pre:p-0 prose-pre:text-base prose-a:text-blue-500 prose-a:underline prose-p:my-1.5"
                 children={content}
                 rehypePlugins={[rehypeHighlight]}
             />
