@@ -44,7 +44,7 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
             <div className="mx-4 flex justify-center gap-8">
                 <button
                     onClick={handlePrev}
-                    className="px-4 py-2 border border-black rounded-md text-sm sm:text-base"
+                    className="px-4 py-2 border border-black rounded-md text-sm sm:text-base font-semibold hover:bg-gray-300"
                 >
                     Prev
                 </button>
@@ -53,7 +53,7 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
                 </span>
                 <button
                     onClick={handleNext}
-                    className="px-4 py-2 border border-black rounded-md text-sm sm:text-base"
+                    className="px-4 py-2 border border-black rounded-md text-sm sm:text-base font-semibold hover:bg-gray-300"
                 >
                     Next
                 </button>

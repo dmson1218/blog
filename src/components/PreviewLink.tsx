@@ -3,8 +3,8 @@ import { MetaData } from '#utils/markdown';
 
 const PreviewLink = ({ title, category, date }: MetaData) => {
     return (
-        <div>
-            <div className="flex flex-col gap-1">
+        <div className="flex gap-1">
+            <div className="flex flex-col">
                 <Link
                     href={`/posts/${title}`}
                     className="text-base sm:text-xl font-bold content-center hover:underline"
