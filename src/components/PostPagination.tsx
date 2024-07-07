@@ -24,14 +24,14 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
     };
 
     return (
-        <div className="h-full flex flex-col">
+        <div className="min-h-full flex flex-col">
             <div className="pb-4 border-b border-black flex flex-col gap-2">
                 <div className="text-xl sm:text-3xl font-bold">Posts</div>
                 <div className="text-base sm:text-lg font-semibold">
                     차곡차곡 모아가는 성장 기록입니다.
                 </div>
             </div>
-            <div className="grow mt-5 sm:mt-10 flex flex-col gap-6 sm:gap-10">
+            <div className="grow mt-5 flex flex-col gap-6 sm:gap-8">
                 {metaDatas[currentPage].map(({ title, category, date }) => (
                     <PreviewLink
                         key={title}
@@ -44,7 +44,7 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
             <div className="mx-4 flex justify-center gap-8">
                 <button
                     onClick={handlePrev}
-                    className="px-4 py-2 border border-black rounded-md text-sm sm:text-base"
+                    className="px-4 py-2 border border-black rounded-md text-sm sm:text-base font-semibold hover:bg-gray-300"
                 >
                     Prev
                 </button>
@@ -53,7 +53,7 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
                 </span>
                 <button
                     onClick={handleNext}
-                    className="px-4 py-2 border border-black rounded-md text-sm sm:text-base"
+                    className="px-4 py-2 border border-black rounded-md text-sm sm:text-base font-semibold hover:bg-gray-300"
                 >
                     Next
                 </button>

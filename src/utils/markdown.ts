@@ -8,6 +8,7 @@ export interface MetaData {
     date: Date;
 }
 
+const RECENT_POSTS = 3;
 const POST_PER_PAGE = 5;
 const markdownDir = path.join(process.cwd(), '/src/content');
 
@@ -47,4 +48,8 @@ export function getMDFilesByPage(): MetaData[][] {
     }
 
     return pages;
+}
+
+export function getRecentMDFiles(): MetaData[] {
+    return getMDFiles().slice(0, RECENT_POSTS);
 }
