@@ -4,8 +4,8 @@ import Navigation from '#components/Navigation';
 import Footer from '#components/Footer';
 
 export const metadata: Metadata = {
-    title: 'ForFree Blog',
-    description: '포프리 블로그입니다.',
+    title: '손동민 기술 블로그',
+    description: '손동민 기술 블로그입니다.',
 };
 
 export default function RootLayout({
