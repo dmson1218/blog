@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MetaData } from '#utils/markdown';
 import PreviewLink from './PreviewLink';
 
@@ -9,7 +9,15 @@ type PostPaginationProps = {
 };
 
 const PostPagination = ({ metaDatas }: PostPaginationProps) => {
-    const [currentPage, setCurrentPage] = useState(0);
+    const [currentPage, setCurrentPage] = useState(
+        sessionStorage.getItem('_CURRENT_PAGE')
+            ? Number(sessionStorage.getItem('_CURRENT_PAGE'))
+            : 0,
+    );
+
+    useEffect(() => {
+        sessionStorage.setItem('_CURRENT_PAGE', String(currentPage));
+    }, [currentPage]);
 
     const handlePrev = () => {
         if (currentPage > 0) {
