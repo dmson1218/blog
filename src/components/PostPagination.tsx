@@ -9,24 +9,26 @@ type PostPaginationProps = {
 };
 
 const PostPagination = ({ metaDatas }: PostPaginationProps) => {
-    const [currentPage, setCurrentPage] = useState(
-        sessionStorage.getItem('_CURRENT_PAGE')
-            ? Number(sessionStorage.getItem('_CURRENT_PAGE'))
-            : 0,
-    );
+    const [currentPage, setCurrentPage] = useState(() => {
+        if (typeof window === 'undefined') {
+            return 1;
+        }
+        const storedPage = sessionStorage.getItem('currentPage');
+        return storedPage ? Number(storedPage) : 1;
+    });
 
     useEffect(() => {
-        sessionStorage.setItem('_CURRENT_PAGE', String(currentPage));
+        sessionStorage.setItem('currentPage', currentPage.toString());
     }, [currentPage]);
 
     const handlePrev = () => {
-        if (currentPage > 0) {
+        if (currentPage > 1) {
             setCurrentPage(currentPage - 1);
         }
     };
 
     const handleNext = () => {
-        if (currentPage < metaDatas.length - 1) {
+        if (currentPage < metaDatas.length) {
             setCurrentPage(currentPage + 1);
         }
     };
@@ -40,7 +42,7 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
                 </div>
             </div>
             <div className="grow mt-5 flex flex-col gap-6 sm:gap-8">
-                {metaDatas[currentPage].map(({ title, category, date }) => (
+                {metaDatas[currentPage - 1].map(({ title, category, date }) => (
                     <PreviewLink
                         key={title}
                         title={title}
@@ -57,7 +59,7 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
                     Prev
                 </button>
                 <span className="w-10 my-auto text-center">
-                    {currentPage + 1} / {metaDatas.length}
+                    {currentPage} / {metaDatas.length}
                 </span>
                 <button
                     onClick={handleNext}
