@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import DarkModeToggle from './DarkModeButton';
 
 const navigationItem = [
     { name: 'Posts', href: '/posts' },
@@ -6,12 +7,13 @@ const navigationItem = [
 ];
 
 const Navigation = () => (
-    <nav className="py-5 border-black border-b">
+    <nav className="py-5 border-b my-border">
         <div className="my-width px-8 mx-auto flex justify-between items-center">
             <Link href="/" className="text-2xl font-semibold italic">
                 Son.
             </Link>
             <div className="flex gap-4 text-lg">
+                <DarkModeToggle />
                 {navigationItem.map(item => (
                     <Link
                         key={item.href}

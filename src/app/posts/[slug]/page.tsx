@@ -27,7 +27,7 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
 
     return (
         <>
-            <div className="pb-6 border-b border-black flex flex-col gap-2">
+            <div className="pb-6 border-b my-border flex flex-col gap-2">
                 <div className="text-2xl sm:text-3xl font-bold">
                     {data.title}
                 </div>
