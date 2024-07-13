@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { MetaData, getRecentMDFiles } from '#utils/markdown';
 import PreviewLink from '#components/PreviewLink';
-import CheckImage from '#components/CheckImage';
+import { SmallCheckImage } from '#components/CheckImage';
 
 const FeaturedList: MetaData[] = [
     {
@@ -23,11 +23,11 @@ const HomePage: React.FC = () => {
                     </div>
                     <div className="flex flex-col gap-1">
                         <div className="text-base sm:text-lg flex gap-1 font-semibold">
-                            <CheckImage size={3} />
+                            <SmallCheckImage />
                             안녕하세요, 손동민 기술 블로그입니다.
                         </div>
                         <div className="text-base sm:text-lg flex gap-1 font-semibold">
-                            <CheckImage size={3} />
+                            <SmallCheckImage />
                             프론트엔드 개발과 클라이밍을 가장 좋아합니다.
                         </div>
                     </div>
