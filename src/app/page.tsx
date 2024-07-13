@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { MetaData, getRecentMDFiles } from '#utils/markdown';
 import PreviewLink from '#components/PreviewLink';
+import CheckImage from '#components/CheckImage';
 
 const FeaturedList: MetaData[] = [
     {
@@ -16,28 +17,22 @@ const HomePage: React.FC = () => {
     return (
         <>
             <div className="flex flex-col gap-5">
-                <div className="pb-5 border-b border-black flex flex-col gap-1 sm:gap-2">
+                <div className="pb-5 border-b my-border flex flex-col gap-1 sm:gap-2">
                     <div className="text-xl sm:text-3xl font-bold">
                         Hello, World!
                     </div>
                     <div className="flex flex-col gap-1">
                         <div className="text-base sm:text-lg flex gap-1 font-semibold">
-                            <img
-                                src="/image/check.png"
-                                className="w-3 h-3 sm:w-4 sm:h-4 mt-1.5"
-                            />
+                            <CheckImage size={3} />
                             안녕하세요, 손동민 기술 블로그입니다.
                         </div>
                         <div className="text-base sm:text-lg flex gap-1 font-semibold">
-                            <img
-                                src="/image/check.png"
-                                className="w-3 h-3 sm:w-4 sm:h-4 mt-1.5"
-                            />
+                            <CheckImage size={3} />
                             프론트엔드 개발과 클라이밍을 가장 좋아합니다.
                         </div>
                     </div>
                 </div>
-                <div className="pb-5 border-b border-black flex flex-col">
+                <div className="pb-5 border-b my-border flex flex-col">
                     <div className="text-xl sm:text-3xl font-bold">
                         Featured
                     </div>
@@ -52,7 +47,7 @@ const HomePage: React.FC = () => {
                         ))}
                     </div>
                 </div>
-                <div className="pb-5 border-b border-black flex flex-col">
+                <div className="pb-5 border-b my-border flex flex-col">
                     <div className="text-xl sm:text-3xl font-bold">
                         Recent Posts
                     </div>
@@ -76,7 +71,7 @@ const HomePage: React.FC = () => {
                 <img
                     src="/image/arrow.png"
                     alt="arrow"
-                    className="w-4 h-4 my-auto"
+                    className="w-4 h-4 my-auto dark:invert transition duration-500"
                 />
             </Link>
         </>

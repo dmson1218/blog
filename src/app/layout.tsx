@@ -15,10 +15,10 @@ export default function RootLayout({
 }>) {
     return (
         <html>
-            <body className="min-h-screen relative bg-slate-100 flex flex-col">
+            <body className="min-h-screen relative bg-slate-100 dark:bg-zinc-900 dark:text-white flex flex-col transition duration-500">
                 <Navigation />
                 <div className="grow flex justify-center">
-                    <div className="my-width p-4 sm:p-8 border-x border-black">
+                    <div className="my-width p-4 sm:p-8 border-x my-border">
                         {children}
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 code {
-    @apply px-1 py-0.5 rounded border bg-gray-300;
+    @apply px-1 py-0.5 rounded bg-slate-300 text-black;
 }
 
 code::before,
@@ -21,4 +21,8 @@ blockquote {
 
 .my-width {
     @apply w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12;
+}
+
+.my-border {
+    @apply border-black dark:border-white;
 }

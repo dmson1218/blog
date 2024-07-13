@@ -1,5 +1,5 @@
 const Footer = () => (
-    <footer className="py-2 border-t border-black">
+    <footer className="py-2 border-t my-border">
         <div className="text-center text-sm">
             © 2024 Dongmin Son. All rights reserved.
         </div>
