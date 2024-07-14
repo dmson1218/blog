@@ -14,11 +14,14 @@ const Navigation = () => {
 
     return (
         <nav className="py-5 border-b my-border">
-            <div className="my-width px-8 mx-auto flex justify-between items-center">
-                <Link href="/" className="text-2xl font-semibold italic">
+            <div className="my-width px-6 sm:px-8 mx-auto flex justify-between items-center">
+                <Link
+                    href="/"
+                    className="text-xl sm:text-2xl font-semibold italic"
+                >
                     Son.
                 </Link>
-                <div className="flex gap-4 text-lg">
+                <div className="flex gap-4 sm:text-lg">
                     <DarkModeToggle />
                     {navigationItems.map(item => (
                         <Link
