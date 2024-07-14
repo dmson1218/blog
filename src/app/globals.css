@@ -16,7 +16,7 @@ li::before {
 }
 
 blockquote {
-    @apply border-l-4 border-blue-400 bg-blue-100 p-2 italic;
+    @apply border-l-4 border-blue-400 dark:border-green-600 bg-blue-100 dark:bg-gray-600 p-2 italic;
 }
 
 .my-width {

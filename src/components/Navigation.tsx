@@ -1,31 +1,41 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import DarkModeToggle from './DarkModeButton';
 
-const navigationItem = [
+const navigationItems = [
     { name: 'Posts', href: '/posts' },
     { name: 'About', href: '/about' },
 ];
 
-const Navigation = () => (
-    <nav className="py-5 border-b my-border">
-        <div className="my-width px-8 mx-auto flex justify-between items-center">
-            <Link href="/" className="text-2xl font-semibold italic">
-                Son.
-            </Link>
-            <div className="flex gap-4 text-lg">
-                <DarkModeToggle />
-                {navigationItem.map(item => (
-                    <Link
-                        key={item.href}
-                        href={item.href}
-                        className="font-semibold hover:underline"
-                    >
-                        {item.name}
-                    </Link>
-                ))}
+const Navigation = () => {
+    const pathname = usePathname();
+
+    return (
+        <nav className="py-5 border-b my-border">
+            <div className="my-width px-6 sm:px-8 mx-auto flex justify-between items-center">
+                <Link
+                    href="/"
+                    className="text-xl sm:text-2xl font-semibold italic"
+                >
+                    Son.
+                </Link>
+                <div className="flex gap-4 sm:text-lg">
+                    <DarkModeToggle />
+                    {navigationItems.map(item => (
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className={`font-semibold hover:underline ${pathname === item.href ? 'underline' : ''}`}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
+                </div>
             </div>
-        </div>
-    </nav>
-);
+        </nav>
+    );
+};
 
 export default Navigation;
