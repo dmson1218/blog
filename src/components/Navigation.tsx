@@ -23,6 +23,13 @@ const Navigation = () => {
                 </Link>
                 <div className="flex gap-4 sm:text-lg">
                     <DarkModeToggle />
+                    <Link
+                        key="/search"
+                        href="/search"
+                        className="w-4 h-4 mx-0.5 sm:mx-1 my-auto cursor-pointer dark:invert transition duration-500"
+                    >
+                        <img src="/image/search.png" alt="search" />
+                    </Link>
                     {navigationItems.map(item => (
                         <Link
                             key={item.href}
