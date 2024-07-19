@@ -2,6 +2,7 @@ import ReactMarkDown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/atom-one-dark.css';
 import { getMDFiles, getMDFileBySlug } from '#utils/markdown';
+import Head from '#components/Head';
 
 type PostBySlugPageParams = {
     params: {
