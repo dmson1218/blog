@@ -6,7 +6,7 @@ import { SmallCheckImage } from '#components/CheckImage';
 const FeaturedList: MetaData[] = [
     {
         title: '부스트캠프 웹·모바일 8기 회고',
-        category: '회고',
+        category: ['부스트캠프', '회고'],
         date: new Date('2024-01-02T00:00:00.000Z'),
     },
 ];

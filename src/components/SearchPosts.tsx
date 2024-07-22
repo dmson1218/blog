@@ -7,8 +7,12 @@ import PreviewLink from './PreviewLink';
 const SearchPosts = ({ metaDatas }: { metaDatas: MetaData[] }) => {
     const [search, setSearch] = useState('');
 
-    const filteredMetaDatas = metaDatas.filter(({ title }) =>
-        title.toLowerCase().includes(search.toLowerCase()),
+    const filteredMetaDatas = metaDatas.filter(
+        ({ title, category }) =>
+            title.toLowerCase().includes(search.toLowerCase()) ||
+            category.some(cat =>
+                cat.toLowerCase().includes(search.toLowerCase()),
+            ),
     );
 
     return (
