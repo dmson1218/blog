@@ -1,6 +1,6 @@
 ---
 title: Next.js에서 마크다운 렌더링하기 (2)
-category: 블로그 개발기
+category: ['블로그', 'CSS', 'rehype', 'highlight.js']
 date: 2024-06-17T07:03:46.000Z
 ---
 

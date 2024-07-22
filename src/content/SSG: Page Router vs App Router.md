@@ -1,6 +1,6 @@
 ---
 title: 'SSG: Page Router vs App Router'
-category: 블로그 개발기
+category: ['블로그', '배포', 'Next.js', 'SSG']
 date: 2024-07-04T15:58:17.000Z
 ---
 

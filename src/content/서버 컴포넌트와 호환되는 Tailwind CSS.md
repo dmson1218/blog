@@ -1,6 +1,6 @@
 ---
 title: 서버 컴포넌트와 호환되는 Tailwind CSS
-category: 블로그 개발기
+category: ['블로그', 'CSS', 'Tailwind CSS']
 date: 2024-06-10T13:05:41.000Z
 ---
 
