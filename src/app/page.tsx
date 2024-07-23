@@ -6,7 +6,7 @@ import { SmallCheckImage } from '#components/CheckImage';
 const FeaturedList: MetaData[] = [
     {
         title: '부스트캠프 웹·모바일 8기 회고',
-        category: ['부스트캠프', '회고'],
+        tags: ['부스트캠프', '회고'],
         date: new Date('2024-01-02T00:00:00.000Z'),
     },
 ];
@@ -37,11 +37,11 @@ const HomePage: React.FC = () => {
                         Featured
                     </div>
                     <div className="grow mt-2 sm:mt-3 flex flex-col gap-3 sm:gap-5">
-                        {FeaturedList.map(({ title, category, date }) => (
+                        {FeaturedList.map(({ title, tags, date }) => (
                             <PreviewLink
                                 key={title}
                                 title={title}
-                                category={category}
+                                tags={tags}
                                 date={date}
                             />
                         ))}
@@ -52,11 +52,11 @@ const HomePage: React.FC = () => {
                         Recent Posts
                     </div>
                     <div className="grow mt-2 sm:mt-3 flex flex-col gap-3 sm:gap-5">
-                        {recentMetaDatas.map(({ title, category, date }) => (
+                        {recentMetaDatas.map(({ title, tags, date }) => (
                             <PreviewLink
                                 key={title}
                                 title={title}
-                                category={category}
+                                tags={tags}
                                 date={date}
                             />
                         ))}

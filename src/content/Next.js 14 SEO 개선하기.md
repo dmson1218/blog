@@ -1,6 +1,6 @@
 ---
 title: Next.js 14 SEO 개선하기
-category: ['블로그', 'SEO', 'next-sitemap']
+tags: ['블로그', 'SEO', 'next-sitemap']
 date: 2024-07-17T12:50:31.000Z
 ---
 

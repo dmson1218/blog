@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { MetaData } from '#utils/markdown';
 import PreviewLink from './PreviewLink';
-import MotionDiv from './MotionDiv';
 
 type PostPaginationProps = {
     metaDatas: MetaData[][];
@@ -52,11 +51,11 @@ const PostPagination = ({ metaDatas }: PostPaginationProps) => {
                 </div>
             </div>
             <div className="grow mt-5 flex flex-col gap-6 sm:gap-8">
-                {metaDatas[currentPage - 1].map(({ title, category, date }) => (
+                {metaDatas[currentPage - 1].map(({ title, tags, date }) => (
                     <PreviewLink
                         key={title}
                         title={title}
-                        category={category}
+                        tags={tags}
                         date={date}
                     />
                 ))}

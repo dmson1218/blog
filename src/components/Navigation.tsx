@@ -6,6 +6,7 @@ import DarkModeToggle from './DarkModeButton';
 
 const navigationItems = [
     { name: 'Posts', href: '/posts' },
+    { name: 'Tags', href: '/tags' },
     { name: 'About', href: '/about' },
 ];
 

@@ -1,4 +1,4 @@
-import { MetaData, getMDFilesByPage } from '#utils/markdown';
+import { getMDFilesByPage } from '#utils/markdown';
 import PostPagination from '#components/PostPagination';
 
 const PostsPage = () => {
