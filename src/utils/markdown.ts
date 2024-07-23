@@ -53,3 +53,30 @@ export function getMDFilesByPage(): MetaData[][] {
 export function getRecentMDFiles(): MetaData[] {
     return getMDFiles().slice(0, RECENT_POSTS);
 }
+
+export function getTags(): string[] {
+    const metaDatas = getMDFiles();
+    const tags = new Map<string, number>();
+
+    metaDatas.forEach(metaData => {
+        metaData.tags.forEach(tag => {
+            tags.set(tag, (tags.get(tag) || 0) + 1);
+        });
+    });
+
+    return Array.from(tags.keys()).sort((a, b) => {
+        const valueA = tags.get(a);
+        const valueB = tags.get(b);
+
+        if (valueA === undefined || valueB === undefined) {
+            return 0;
+        }
+
+        return valueB - valueA;
+    });
+}
+
+export function getMDFilesByTag(tag: string): MetaData[] {
+    const metaDatas = getMDFiles();
+    return metaDatas.filter(metaData => metaData.tags.includes(tag));
+}
