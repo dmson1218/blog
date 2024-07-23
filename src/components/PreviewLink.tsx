@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { MetaData } from '#utils/markdown';
 
-const PreviewLink = ({ title, category, date }: MetaData) => {
+const PreviewLink = ({ title, tags, date }: MetaData) => {
     return (
         <div className="flex gap-1">
             <div className="flex flex-col">
@@ -18,12 +18,12 @@ const PreviewLink = ({ title, category, date }: MetaData) => {
                         {date.getDate().toString().padStart(2, '0')}
                     </div>
                     <div className="flex gap-1.5">
-                        {category.map(cat => (
+                        {tags.map(tag => (
                             <div
-                                key={cat}
+                                key={tag}
                                 className="text-xs sm:text-sm italic"
                             >
-                                #{cat}
+                                #{tag}
                             </div>
                         ))}
                     </div>

@@ -1,6 +1,6 @@
 ---
 title: Next.js에서 마크다운 렌더링하기 (1)
-category: ['블로그', 'react-markdown']
+tags: ['블로그', 'react-markdown']
 date: 2024-06-13T10:43:01.000Z
 ---
 

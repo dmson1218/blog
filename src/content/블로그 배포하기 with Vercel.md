@@ -1,6 +1,6 @@
 ---
 title: 블로그 배포하기 with Vercel
-category: ['블로그', '배포', 'Vercel']
+tags: ['블로그', '배포', 'Vercel']
 date: 2024-07-09T14:48:01.000Z
 ---
 

@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 export interface MetaData {
     title: string;
-    category: string[];
+    tags: string[];
     date: Date;
 }
 

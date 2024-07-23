@@ -1,6 +1,6 @@
 ---
 title: SSR, 서버 컴포넌트, 그리고 styled-components
-category: ['블로그', 'CSS', 'styled-components']
+tags: ['블로그', 'CSS', 'styled-components']
 date: 2024-06-10T10:00:46.000Z
 ---
 

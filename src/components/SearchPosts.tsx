@@ -8,11 +8,9 @@ const SearchPosts = ({ metaDatas }: { metaDatas: MetaData[] }) => {
     const [search, setSearch] = useState('');
 
     const filteredMetaDatas = metaDatas.filter(
-        ({ title, category }) =>
+        ({ title, tags }) =>
             title.toLowerCase().includes(search.toLowerCase()) ||
-            category.some(cat =>
-                cat.toLowerCase().includes(search.toLowerCase()),
-            ),
+            tags.some(tag => tag.toLowerCase().includes(search.toLowerCase())),
     );
 
     return (
@@ -38,11 +36,11 @@ const SearchPosts = ({ metaDatas }: { metaDatas: MetaData[] }) => {
             </div>
             <div className="grow mt-5 flex flex-col gap-6 sm:gap-8">
                 {search
-                    ? filteredMetaDatas.map(({ title, category, date }) => (
+                    ? filteredMetaDatas.map(({ title, tags, date }) => (
                           <PreviewLink
                               key={title}
                               title={title}
-                              category={category}
+                              tags={tags}
                               date={date}
                           />
                       ))
