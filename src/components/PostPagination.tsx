@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { MetaData } from '#utils/markdown';
 import PreviewLink from './PreviewLink';
-import MotionDiv from './MotionDiv';
 
 type PostPaginationProps = {
     metaDatas: MetaData[][];
