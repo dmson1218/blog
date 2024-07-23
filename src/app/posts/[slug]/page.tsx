@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ReactMarkDown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/atom-one-dark.css';
@@ -27,14 +28,25 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
 
     return (
         <>
-            <div className="pb-6 border-b my-border flex flex-col gap-2">
+            <div className="pb-4 sm:pb-6 border-b my-border flex flex-col sm:gap-1">
+                <div className="flex gap-2">
+                    {data.tags.map(tag => (
+                        <Link
+                            key={tag}
+                            href={`/tags/${tag}`}
+                            className="text-sm sm:text-base italic hover:underline"
+                        >
+                            #{tag}
+                        </Link>
+                    ))}
+                </div>
                 <div className="text-2xl sm:text-3xl font-bold">
                     {data.title}
                 </div>
             </div>
             <ReactMarkDown
                 key={content}
-                className="prose-base prose-headings:mt-6 prose-headings:mb-1 prose-headings:font-bold prose-img:mx-auto prose-img:my-2 prose-pre:my-0 prose-pre:p-0 prose-pre:text-base prose-a:text-blue-500 prose-a:underline prose-p:my-1.5"
+                className="prose-base prose-headings:mt-4 sm:prose-headings:mt-6 prose-headings:mb-1 prose-headings:font-bold prose-img:mx-auto prose-img:my-2 prose-pre:my-0 prose-pre:p-0 prose-pre:text-base prose-a:text-blue-500 prose-a:underline prose-p:my-1.5"
                 children={content}
                 rehypePlugins={[rehypeHighlight]}
             />
