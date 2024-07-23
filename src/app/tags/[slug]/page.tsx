@@ -25,7 +25,9 @@ const PostByTagPage = ({ params }: PostByTagPageParams) => {
     return (
         <>
             <div className="pb-4 border-b my-border flex flex-col gap-2">
-                <div className="text-xl sm:text-3xl font-bold">#{tag}</div>
+                <div className="text-xl sm:text-3xl font-bold italic">
+                    #{tag}
+                </div>
                 <div className="text-base sm:text-lg font-semibold">
                     총 {metaDatas.length}개의 기록이 있습니다.
                 </div>
