@@ -19,12 +19,13 @@ const PreviewLink = ({ title, tags, date }: MetaData) => {
                     </div>
                     <div className="flex gap-1.5">
                         {tags.map(tag => (
-                            <div
+                            <Link
                                 key={tag}
-                                className="text-xs sm:text-sm italic"
+                                href={`/tags/${tag}`}
+                                className="text-xs sm:text-sm italic hover:underline"
                             >
                                 #{tag}
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
