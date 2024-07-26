@@ -1,4 +1,5 @@
 import { BigCheckImage, SmallCheckImage } from '#components/CheckImage';
+import ScrollButton from '#components/ScrollButton';
 
 const AboutPage: React.FC = () => {
     return (
@@ -300,6 +301,7 @@ const AboutPage: React.FC = () => {
                     2019.03 ~ 2025.08
                 </div>
             </div>
+            <ScrollButton />
         </div>
     );
 };
