@@ -3,6 +3,7 @@ import ReactMarkDown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/atom-one-dark.css';
 import { getMDFiles, getMDFileBySlug } from '#utils/markdown';
+import ScrollButton from '#components/ScrollButton';
 
 type PostBySlugPageParams = {
     params: {
@@ -55,6 +56,7 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
                 {(data.date.getMonth() + 1).toString().padStart(2, '0')}.{' '}
                 {data.date.getDate().toString().padStart(2, '0')}.
             </div>
+            <ScrollButton />
         </>
     );
 };

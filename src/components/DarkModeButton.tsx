@@ -27,7 +27,7 @@ const DarkModeButton = () => {
         <img
             src="/image/dark.png"
             alt="dark mode"
-            className="w-5 h-5 my-auto cursor-pointer dark:invert transition duration-500"
+            className="w-5 h-5 my-auto cursor-pointer dark:invert transition duration-500 hover:scale-125 transition-transform"
             onClick={toggleDarkMode}
         />
     );

@@ -27,7 +27,7 @@ const Navigation = () => {
                     <Link
                         key="/search"
                         href="/search"
-                        className="w-4 h-4 mx-0.5 sm:mx-1 my-auto cursor-pointer dark:invert transition duration-500"
+                        className="w-4 h-4 mx-0.5 sm:mx-1 my-auto cursor-pointer dark:invert transition duration-500 hover:scale-125 transition-transform"
                     >
                         <img src="/image/search.png" alt="search" />
                     </Link>
