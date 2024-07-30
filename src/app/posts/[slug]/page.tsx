@@ -47,7 +47,7 @@ const PostBySlugPage = ({ params }: PostBySlugPageParams) => {
             </div>
             <ReactMarkDown
                 key={content}
-                className="prose-base prose-headings:mt-4 sm:prose-headings:mt-6 prose-headings:mb-1 prose-headings:font-bold prose-img:mx-auto prose-img:my-2 prose-pre:my-0 prose-pre:p-0 prose-pre:text-base prose-a:text-blue-500 prose-a:underline prose-p:my-1.5"
+                className="prose-base prose-headings:mt-4 sm:prose-headings:mt-6 prose-headings:mb-1 prose-headings:font-bold prose-img:mx-auto prose-img:my-2 prose-pre:my-0 prose-pre:p-0 prose-pre:text-base prose-a:text-blue-500 prose-a:underline prose-p:my-1.5 prose-ul:my-0"
                 children={content}
                 rehypePlugins={[rehypeHighlight]}
             />
