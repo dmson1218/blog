@@ -11,8 +11,46 @@ code::after {
     content: none !important;
 }
 
+ul {
+    @apply ml-0;
+}
+
+ul ul {
+    @apply ml-4;
+}
+
+ul ul ul {
+    @apply ml-4;
+}
+
 li::before {
-    content: '- ';
+    width: 1rem;
+    position: relative;
+    left: -0.1rem;
+    top: -0.15rem;
+    content: '▪';
+    font-size: 0.75rem;
+    line-height: 0em;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul ul li::before {
+    width: 1rem;
+    left: 0.1rem;
+    top: -0.1rem;
+    font-size: 1rem;
+    content: '-';
+}
+
+ul ul ul li::before {
+    width: 1rem;
+    content: 'ㄴ';
+    left: -0.1rem;
+    top: -0.15rem;
+    font-size: 0.75rem;
+    font-weight: bold;
 }
 
 blockquote {
