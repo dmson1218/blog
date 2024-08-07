@@ -2,30 +2,32 @@
 
 import { useEffect, useRef } from 'react';
 
+const scriptConfig = {
+    src: 'https://utteranc.es/client.js',
+    repo: 'dmson1218/blog',
+    'issue-term': 'pathname',
+    label: 'Comment',
+    theme: 'github-light',
+    crossorigin: 'anonymous',
+    async: true,
+};
+
 const PostComment = () => {
-    const utterancesRef = useRef<HTMLDivElement>(null);
+    const utterances = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const scriptParentNode = utterancesRef.current;
-        if (!scriptParentNode) return;
-
-        while (scriptParentNode.firstChild) {
-            scriptParentNode.removeChild(scriptParentNode.firstChild);
-        }
-
         const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        script.setAttribute('repo', 'dmson1218/blog');
-        script.setAttribute('issue-term', 'pathname');
-        script.setAttribute('label', 'Comment');
-        script.setAttribute('theme', 'github-light');
-        script.setAttribute('crossorigin', 'anonymous');
 
-        if (utterancesRef.current) utterancesRef.current.appendChild(script);
+        Object.entries(scriptConfig).forEach(([key, value]) => {
+            script.setAttribute(key, String(value));
+        });
+
+        if (utterances.current && utterances.current.childNodes.length === 0) {
+            utterances.current.appendChild(script);
+        }
     }, []);
 
-    return <div ref={utterancesRef} />;
+    return <div ref={utterances} />;
 };
 
 export default PostComment;
