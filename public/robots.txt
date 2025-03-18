@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dmson1218.com
+
+# Sitemaps
+Sitemap: https://dmson1218.com/sitemap.xml
+Sitemap: https://dmson1218.com/server-sitemap.xml
