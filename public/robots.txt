@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://dmson1218.com
+Host: https://dmson1218.vercel.app/
 
 # Sitemaps
-Sitemap: https://dmson1218.com/sitemap.xml
-Sitemap: https://dmson1218.com/server-sitemap.xml
+Sitemap: https://dmson1218.vercel.app/sitemap.xml
+Sitemap: https://dmson1218.vercel.app/server-sitemap.xml
